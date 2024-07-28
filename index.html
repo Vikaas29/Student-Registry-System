@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="VIKAS YADAV">
+    <meta name="keywords" content="Registry Log">
+    <meta name="description" content="Store student information">
+    <title>Student_Registration_System</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="pageTitle.jpeg" type="image/x-icon">
+    </head>
+  <body>
+
+    <!-- header secton -->
+    <header>
+        <h1>Student Lo<div id="g">g</div></h1>
+        <p>Save, Edit or Delete student logs.</p>
+    </header>
+
+
+    <main>
+      <!-- this section hold the information (tips) shown on the right corner of the screen -->
+      <section id="sectionNav">
+          <div class="reset1"></div><pre>RESET</pre>
+          <br>
+        <div class="delete1">
+          <div class="del01"></div>
+          <div class="del02"></div>
+          </div><br><pre>DELETE</pre>
+        
+      </section>
+
+        <!-- section that will hold the form and input itself -->
+      <section id="section1">
+        
+        <div id="form" >
+          <input id="name" type="text" placeholder="Student Name" required onkeyup="check()"/><!--to make it only take the alphabets-->
+          <input id="id" type="number" placeholder="Student ID" required/>
+          <input id="mail" type="text" placeholder="Student E-mail" required/>
+          <input
+            id="contact"
+            type="number"
+            placeholder="Student Contact Number"
+            min="1000000000"
+            max="99999999999"
+            required
+          />
+          <button id="submit">REGISTER</button>
+        </div>
+      </section>
+
+      <!--this section holds the toggle button to display and hide the registered logs -->
+      <section id="sectionToggle">
+        <input type="checkbox" id="toggle" >
+        <label for="toggle" id="label" onclick="toggle()"></label><div id="showLog">Show Log</div>
+      </section>
+
+      <!-- this section holds the toggle button to disable and enable the background -->
+      <section id="sectionBackground">
+        <input type="checkbox" id="toggleBack" checked>
+        <label for="toggleBack" id="label1" onclick="toggleBackground()"></label><div id="showLog">Background</div>
+      </section>
+
+      <!-- this section holds the Stored Logs in the form of HTML table-->
+      <section id="section2">
+        <table id="table" border="1" >
+          <thead>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>E-Mail</th>
+            <th>Contact</th>
+            <th>Action</th>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        All Rights Reserved
+    </footer>
+  </body>
+</html>

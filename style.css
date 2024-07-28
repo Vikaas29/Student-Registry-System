@@ -1,0 +1,433 @@
+/* to remove the increase and decrease buttons in the input number field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::placeholder{
+    color: #000;
+    font-size: medium;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    gap: 0px;
+    font-family:monospace, Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    position: relative;
+    background-image: url(gif.gif);
+    background-color: black;
+    
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    backdrop-filter: blur(30px);
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    animation: sign 2s infinite  linear;
+}
+
+/* animation for the text shadows (same keyframe used at all instances*/
+@keyframes sign {
+    0%{
+        text-shadow: 3px 3px 20px aqua ;
+    }
+    25%{
+        text-shadow: 3px -3px 20px plum ;
+    }
+    50%{
+        text-shadow: -3px -3px 20px aqua ;
+    }
+    75%{
+        text-shadow: -3px 3px 20px plum ;
+    }
+    100%{
+        text-shadow: 3px 3px 20px aqua ;
+    }
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+h1{
+    font-size: 50px;
+    color: white;
+    position: relative;
+}
+#g{
+    display: inline-block;
+    animation: shake 1s infinite alternate ease-in-out;
+}
+/* animation for the 'g' character*/
+@keyframes shake  {
+    0%{
+        rotate: 40deg;
+    }
+    100%{
+        rotate: -40deg;
+    }
+}
+p{
+    font-size:25px;
+    color: white;
+}
+#section1{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60vw;
+    max-width: 600px;
+    height: fit-content;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    animation: shadow 5s infinite linear;
+}
+/* animation for the box shadows */
+@keyframes shadow {
+    0%{
+        box-shadow: 5px 5px 40px aqua;
+    }
+    25%{
+        box-shadow: 5px -5px 40px plum;
+    }
+    50%{
+        box-shadow: -5px -5px 40px aqua;
+    }
+    75%{
+        box-shadow: -5px 5px 40px plum;
+    }
+    100%{
+        box-shadow: 5px 5px 40px aqua;
+    }
+    
+    
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;;
+    height: fit-content;
+}
+input{
+    width: 80%;
+    max-width: 500px;
+    height: 40px;
+    border-radius:10px;
+    font-weight: bolder;
+    color: black;
+    font-size: large;
+}
+input:hover{
+    background-color: beige;
+    
+}
+#submit{
+    width: 50%;
+    min-width: 100px;
+    max-width: 200px;
+    height: 30px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px white;
+    animation: shadow2 5s infinite linear;
+}
+#submit:hover{
+    animation: slide 0.3s linear ;
+}
+
+/* animation used on register button and the delete reset icons */
+@keyframes slide {
+    0%{
+        background-image: linear-gradient(to right,white,black,black,black,black,black,black,black,black,black);
+    }
+    10%{
+        background-image: linear-gradient(to right,black,white,black,black,black,black,black,black,black,black);
+    }
+    20%{
+        background-image: linear-gradient(to right,black,black,white,black,black,black,black,black,black,black);
+    }
+    30%{
+        background-image: linear-gradient(to right,black,black,black,white,black,black,black,black,black,black);
+    }
+    40%{
+        background-image: linear-gradient(to right,black,black,black,black,white,black,black,black,black,black);
+    }
+    50%{
+        background-image: linear-gradient(to right,black,black,black,black,black,white,black,black,blackblack);
+    }
+    60%{
+        background-image: linear-gradient(to right,black,black,black,black,black,black,white,black,black,black);
+    }
+    70%{
+        background-image: linear-gradient(to right,black,black,black,black,black,black,black,white,black,black);
+    }
+    80%{
+        background-image: linear-gradient(to right,black,black,black,black,black,black,black,black,white,black);
+    }
+    90%{
+        background-image: linear-gradient(to right,black,black,black,black,black,black,black,black,black,white);
+    }
+    100%{
+        background-image: linear-gradient(to right,black,black,black,black,black,black,black,black,black,black);
+    }
+    
+}
+
+/* shadow animation around the register button*/
+@keyframes shadow2 {
+    0%{
+        box-shadow: 1px 1px 5px aqua;
+    }
+    25%{
+        box-shadow: 1px -1px 5px plum;
+    }
+    50%{
+        box-shadow: -1px -1px 5px aqua;
+    }
+    75%{
+        box-shadow: -1px 1px 5px plum;
+    }
+    100%{
+        box-shadow: 1px 1px 5px aqua;
+    }
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 60vw;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.596);
+    font-size: larger;
+}
+
+/* media query to reduce size of some element making then fit in small screen */
+@media screen and (max-width: 600px) {
+    
+    table{
+        font-size: 11px;    
+    }
+    #section2{
+        margin-bottom: 50px;
+    }
+}
+
+.action{
+    position: relative;
+}
+.reset{
+    width: 15px;
+    height:15px;
+    background-color: black;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 10px;
+    margin-left: 40%;
+}
+.reset:hover{
+    background-color: grey;
+    animation: slide 0.4s linear;
+}
+.delete{
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 37%;
+    z-index: 100px;
+}
+.delete:hover{
+    .del1 , .del2 {
+        background-color: grey;
+        animation: slide 0.4s linear;
+    }
+}
+/* custom delete icon bar1 */
+.del1{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    rotate: 45deg;
+    transform: translateX(1px);
+}
+/* custom delete icon bar2 */
+.del2{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    rotate: -45deg;
+    transform: translateX(2px);
+}
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    color: white;
+    font-size: larger;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    animation: shadow 5s infinite linear;
+}
+
+#section2{
+    max-height: 300px;
+    overflow: auto; 
+    animation: shadow 5s infinite linear;
+    opacity: 0;
+    transition: all 1s linear ;
+}
+@media screen and (max-width: 600px) {
+    #section2{
+        max-height: 200px;
+    }
+    
+}
+
+#showLog{color: white;}
+
+/* label for student log toggle */
+#label{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.479);
+    backdrop-filter: blur(10px);
+    margin: 10px;
+    animation: shadow2 5s infinite linear;
+}
+
+/* label for background toggle */
+#label1{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.479);
+    backdrop-filter: blur(10px);
+    margin: 10px;
+    animation: shadow2 5s infinite linear;
+}
+#label::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px black solid;
+    border-radius: 0px;
+    background-color:red;
+    transform: translatex(1px);
+    transition: all 0.3s ease-in-out;
+    animation: shadow2 5s infinite linear;
+}
+#label1::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px black solid;
+    border-radius: 0px;
+    background-color:red;
+    transform: translatex(1px);
+    transition: all 0.3s ease-in-out;
+    animation: shadow2 5s infinite linear;
+}
+#toggle{
+    display: none;
+}
+
+#toggleBack{
+    display: none;
+}
+#toggle:checked + #label::after{
+    border-radius: 20px;
+    transform: translatex(35px);
+    background-color: rgb(72, 255, 0);   
+}
+#toggleBack:checked + #label1::after{
+    border-radius: 20px;
+    transform: translatex(35px);
+    background-color: rgb(72, 255, 0);   
+}
+
+/* information (tip)  */
+#sectionNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.596);
+    width: 80px;
+    height: 120px;
+    border-radius: 10px;
+    scale: 0.7;
+    position: fixed;
+    right: 0px;
+    top: 52%;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+.reset1{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: black;
+    
+}
+/* custom delete icon bar1 (made to fit in the tip section) */
+.del01{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    rotate: 45deg;
+    transform: translateY(2px);
+
+}
+/* custom delete icon bar2 (made to fit in the tip section)*/
+.del02{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    rotate: -45deg;
+    transform: translateY(-1px);
+}
+#sectionBackground{
+    position: fixed;
+    right: 0px;
+    top: 45%;
+    font-size: 10px;
+    text-align: center;
+}
